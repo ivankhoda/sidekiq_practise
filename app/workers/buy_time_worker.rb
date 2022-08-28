@@ -7,6 +7,6 @@ class BuyTimeWorker
 
     p 'Long app'
 
-    p 'very long app, really'
+    p 'very long app, really check check check stuff'
   end
 end
