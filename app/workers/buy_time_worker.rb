@@ -6,5 +6,7 @@ class BuyTimeWorker
     sleep(6)
 
     p 'Long app'
+
+    p 'very long app, really'
   end
 end

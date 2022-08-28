@@ -5,9 +5,15 @@ class TeamsController < ApplicationController
   end
 
   def show
-    team = Team.where(id: team_params[:id]).select(:id, :name, :rating)
+    team = Team.where(id: team_params[:id]).select(:id,
+                                                   :name,
+                                                   :rating)
     BuyTimeWorker.perform_async(team.first.name, team.first.rating)
     render json: { data: team }
+  end
+
+  def edit
+    p 'edit'
   end
 
   private
